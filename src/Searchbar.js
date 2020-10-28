@@ -5,8 +5,11 @@ export default class Searchbar extends Component {
     render() {
         return (
             <section className="searchbar">
-                Searchbar (children: Sort)
-                <Sort />
+                <Sort 
+                    data={this.props.data}
+                    handleCategorySelect={this.props.handleCategorySelect}
+                    handleSort={this.props.handleSort}
+                />
             </section>
         )
     }
