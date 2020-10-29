@@ -33,6 +33,9 @@ header {
 
 .navbar {
   background-position-x: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 main {
