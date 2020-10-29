@@ -4,11 +4,9 @@ import PokeItem from './PokeItem.js';
 export default class PokeList extends Component {
     render() {
 
-        const filtered = filterData(this.props.data, this.props.selectedCategory);
+        const filtered = filterData(this.props.pokedex, this.props.selectedCategory);
         const sorted = sortData(filtered, this.props.selectedSort);
-        console.log("sorted", sorted);
         const validated = searchValidation(sorted, this.props.inputVal);
-        console.log("validated", validated);
 
         return (
             <section className="poke-list">
@@ -20,7 +18,7 @@ export default class PokeList extends Component {
                         image={pokemon.url_image}
                         typeOne={pokemon.type_1}
                         typeTwo={pokemon.type_2}
-                        pokedexEntry={pokemon.pokedex_entry}
+                        // pokedexEntry={pokemon.pokedex_entry}
                         shape={pokemon.shape}
                         key={index}
                     />)})

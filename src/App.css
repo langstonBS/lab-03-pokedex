@@ -63,6 +63,12 @@ main {
   text-align: center;
 }
 
+.submit-button {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
 .updown-dropdown, .category-dropdown {
   margin: 5px; 
   height: 25px;
