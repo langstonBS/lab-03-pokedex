@@ -7,7 +7,7 @@ export default class Searchbar extends Component {
             <section  className="searchbar">
                 {/* <div>{this.props.inputVal}</div> */}
                 <input 
-                    placeholder=" search by name ..."
+                    placeholder=" search Pokemon by name..."
                     className="searchbar-input"
                     onChange={this.props.handleSearch}
                 />
