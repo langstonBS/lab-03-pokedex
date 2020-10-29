@@ -5,15 +5,15 @@ export default class Sort extends Component {
         return (
             <div className="sort-dropdown">
                 <select className="updown-dropdown" defaultValue={this.props.selectedSort} onChange={this.props.handleSort}>
-                    <option value=''>sort by...</option>
-                    <option value='ascending'>ascending (z-a)</option>
-                    <option value='descending'>descending (a-z)</option>
+                    <option className="content" value=''>sort by...</option>
+                    <option className="content" value='ascending'>ascending (z-a)</option>
+                    <option className="content" value='descending'>descending (a-z)</option>
                 </select>
                 <select className="category-dropdown" defaultValue={this.props.selectedCategory} onChange={this.props.handleCategorySelect}>
-                    <option value=''>all categories</option>
+                    <option className="content" value=''>all categories</option>
                     {
                         getUniqueCategories(this.props.data).map((category, index) => 
-                        <option value={category} key={index}>{category}</option>)
+                        <option className="content" value={category} key={index}>{category}</option>)
                     }
                 </select>
             </div>

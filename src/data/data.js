@@ -1,7 +1,7 @@
 export const pokemon = [
     {
        '_id':'5cef3501ef6005a77cd4fd17',
-       'pokemon':'bulbasaur',
+       'pokemon':'Bulbasaur',
        'id':1,
        'species_id':1,
        'height':7,
@@ -30,11 +30,12 @@ export const pokemon = [
        'shape_id':8,
        'shape':'quadruped',
        'pokebase':'bulbasaur',
+       'pokedex_entry':'Researchers are unsure whether to classify Bulbasaur as a plant or animal. Bulbasaur are extremely tough and very difficult to capture in the wild.',
        'pokedex':'http://www.pokemon.com/us/pokedex/bulbasaur'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd19',
-       'pokemon':'ivysaur',
+       'pokemon':'Ivysaur',
        'id':2,
        'species_id':2,
        'height':10,
@@ -63,11 +64,12 @@ export const pokemon = [
        'shape_id':8,
        'shape':'quadruped',
        'pokebase':'ivysaur',
+       'pokedex_entry':'The Seed Pokémon, Ivysaur, Bulbasaur\'s evolved form. The bulb on its back absorbs nourishment and blooms into a large flower.',
        'pokedex':'http://www.pokemon.com/us/pokedex/ivysaur'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd1a',
-       'pokemon':'charmander',
+       'pokemon':'Charmander',
        'id':5,
        'species_id':4,
        'height':6,
@@ -96,11 +98,12 @@ export const pokemon = [
        'shape_id':6,
        'shape':'upright',
        'pokebase':'charmander',
+       'pokedex_entry':'Charmander. A flame burns on the tip of its tail from birth. It is said that a Charmander dies if its flame ever goes out.',
        'pokedex':'http://www.pokemon.com/us/pokedex/charmander'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd1b',
-       'pokemon':'charmeleon',
+       'pokemon':'Charmeleon',
        'id':6,
        'species_id':5,
        'height':11,
@@ -129,11 +132,12 @@ export const pokemon = [
        'shape_id':6,
        'shape':'upright',
        'pokebase':'charmeleon',
+       'pokedex_entry':'Charmeleon, the Flame Pokémon. It has razor-sharp claws and its tail is exceptionally strong.',
        'pokedex':'http://www.pokemon.com/us/pokedex/charmeleon'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd1c',
-       'pokemon':'charizard',
+       'pokemon':'Charizard',
        'id':7,
        'species_id':6,
        'height':17,
@@ -155,18 +159,19 @@ export const pokemon = [
        'color_f':'#DE835E',
        'egg_group_1':'monster',
        'egg_group_2':'dragon',
-       'url_image':'http://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png',
+       'url_image':'https://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/900px-006Charizard.png',
        'generation_id':1,
        'evolves_from_species_id':'5',
        'evolution_chain_id':2,
        'shape_id':6,
        'shape':'upright',
        'pokebase':'charizard',
+       'pokedex_entry':'Charizard, the Flame Pokémon. Charizard\'s powerful flame can melt absolutely anything.',
        'pokedex':'http://www.pokemon.com/us/pokedex/charizard'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd1f',
-       'pokemon':'squirtle',
+       'pokemon':'Squirtle',
        'id':10,
        'species_id':7,
        'height':5,
@@ -195,11 +200,12 @@ export const pokemon = [
        'shape_id':6,
        'shape':'upright',
        'pokebase':'squirtle',
+       'pokedex_entry':'Squirtle draws its long neck into its shell to launch incredible water attacks with amazing range and accuracy. The blasts can be quite powerful.',
        'pokedex':'http://www.pokemon.com/us/pokedex/squirtle'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd20',
-       'pokemon':'wartortle',
+       'pokemon':'Wartortle',
        'id':11,
        'species_id':8,
        'height':10,
@@ -228,11 +234,12 @@ export const pokemon = [
        'shape_id':6,
        'shape':'upright',
        'pokebase':'wartortle',
+       'pokedex_entry':'Wartortle, the Turtle Pokémon. The evolved form of Squirtle. A highly sought-after Pokémon because its long fur-covered tail is said to bring good luck.',
        'pokedex':'http://www.pokemon.com/us/pokedex/wartortle'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd21',
-       'pokemon':'blastoise',
+       'pokemon':'Blastoise',
        'id':12,
        'species_id':9,
        'height':16,
@@ -261,11 +268,12 @@ export const pokemon = [
        'shape_id':6,
        'shape':'upright',
        'pokebase':'blastoise',
+       'pokedex_entry':'Blastoise\'s strength lies in its power, rather than its speed. Its shell is like armor and attacks from the hydro cannons on its back are virtually unstoppable.',
        'pokedex':'http://www.pokemon.com/us/pokedex/blastoise'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd23',
-       'pokemon':'caterpie',
+       'pokemon':'Caterpie',
        'id':14,
        'species_id':10,
        'height':3,
@@ -294,11 +302,12 @@ export const pokemon = [
        'shape_id':2,
        'shape':'squiggle',
        'pokebase':'caterpie',
+       'pokedex_entry':'Caterpie, the Worm Pokémon. To repel enemies, Caterpie releases an unpleasant odor from its red antenna. It molts several times while growing.',
        'pokedex':'http://www.pokemon.com/us/pokedex/caterpie'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd24',
-       'pokemon':'metapod',
+       'pokemon':'Metapod',
        'id':15,
        'species_id':11,
        'height':7,
@@ -327,11 +336,12 @@ export const pokemon = [
        'shape_id':2,
        'shape':'squiggle',
        'pokebase':'metapod',
+       'pokedex_entry':'Metapod, the Cocoon Pokémon. Metapod is the evolved form of Caterpie. Using a hard shell to protect its body, it prepares for its next evolution.',
        'pokedex':'http://www.pokemon.com/us/pokedex/metapod'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd25',
-       'pokemon':'beedrill',
+       'pokemon':'Beedrill',
        'id':19,
        'species_id':15,
        'height':10,
@@ -360,11 +370,12 @@ export const pokemon = [
        'shape_id':13,
        'shape':'bug-wings',
        'pokebase':'beedrill',
+       'pokedex_entry':'Beedrill, the Poison Bee Pokémon. Beedrill fly quickly and attack using poison stingers on their forelegs and tail.',
        'pokedex':'http://www.pokemon.com/us/pokedex/beedrill'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd26',
-       'pokemon':'weedle',
+       'pokemon':'Weedle',
        'id':17,
        'species_id':13,
        'height':3,
@@ -393,11 +404,12 @@ export const pokemon = [
        'shape_id':2,
        'shape':'squiggle',
        'pokebase':'weedle',
+       'pokedex_entry':'Weedle. The stinger on this Pokémon\'s head guarantees that any attacker will get the point right where it hurts.',
        'pokedex':'http://www.pokemon.com/us/pokedex/weedle'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd27',
-       'pokemon':'kakuna',
+       'pokemon':'Kakuna',
        'id':18,
        'species_id':14,
        'height':6,
@@ -426,11 +438,12 @@ export const pokemon = [
        'shape_id':2,
        'shape':'squiggle',
        'pokebase':'kakuna',
+       'pokedex_entry':'Kakuna, a transitional stage between Weedle and Beedrill. Kakunas remain inactive until they evolve into deadly Beedrills and hatch.',
        'pokedex':'http://www.pokemon.com/us/pokedex/kakuna'
     },
     {
        '_id':'5cef3501ef6005a77cd4fd29',
-       'pokemon':'pidgey',
+       'pokemon':'Pidgey',
        'id':21,
        'species_id':16,
        'height':3,
@@ -459,6 +472,7 @@ export const pokemon = [
        'shape_id':9,
        'shape':'wings',
        'pokebase':'pidgey',
+       'pokedex_entry':'Pidgey is a Flying Pokémon. Among all the Flying Pokémon, it is the gentlest and easiest to capture. A perfect target for the beginning Pokémon Trainer to test his Pokémon\'s skills.',
        'pokedex':'http://www.pokemon.com/us/pokedex/pidgey'
     }
 ]

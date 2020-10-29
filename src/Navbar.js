@@ -4,7 +4,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <div className="navbar">
-                navbar
+                navbar was in the rubric but it's useless
             </div>
         )
     }
