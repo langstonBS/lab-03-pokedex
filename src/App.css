@@ -46,6 +46,21 @@ main {
   height: 100%;
 }
 
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .loading > div {
+  margin: 20px;
+} */
+
+.loading-gif {
+  max-width: 10%;
+}
+
 .poke-list, .searchbar {
   display: flex;
   justify-content: center;

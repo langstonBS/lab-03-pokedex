@@ -10,7 +10,7 @@ export default class Main extends Component {
     selectedSort: '',
     inputVal: '',
     pokedex: [],
-    pokemonName: ''
+    loading: true
   }
 
   handleCategorySelect = (e) => {
@@ -28,7 +28,6 @@ export default class Main extends Component {
   handleSearch = async (e) => {
     this.setState({
       inputVal: e.target.value,
-      // pokemonName: e.target.value
     });
     await this.fetchPokemonAPI();
     console.log('this.state.pokedex: ', this.state.pokedex);
@@ -48,10 +47,16 @@ export default class Main extends Component {
   fetchPokemonAPI = async () => {
     if (this.state.inputVal.length > 0) {
       const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.inputVal}`);      
-      return this.setState({ pokedex: res.body.results });
+      return this.setState({ 
+        pokedex: res.body.results,
+        loading: false
+      });
     } else {
       const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?perPage="801"`);
-      return this.setState({ pokedex: res.body.results });
+      return this.setState({ 
+        pokedex: res.body.results,
+        loading: false
+      });
     }
   }
 
@@ -70,6 +75,7 @@ export default class Main extends Component {
         />
         <PokeList 
           data={this.state.pokedex}
+          loading={this.state.loading}
           selectedCategory={this.state.selectedCategory}
           selectedSort={this.state.selectedSort}
           inputVal={this.state.inputVal}

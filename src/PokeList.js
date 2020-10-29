@@ -11,14 +11,18 @@ export default class PokeList extends Component {
         return (
             <section className="poke-list">
                 {
-                validated.map((pokemon, index) => { 
+                this.props.loading ? 
+                <div className="loading">
+                    <img className="loading-gif" src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg" alt="loading" />
+                    {/* <div>loading...</div> */}
+                </div>
+                : validated.map((pokemon, index) => { 
                     return(
                     <PokeItem 
                         name={pokemon.pokemon}
                         image={pokemon.url_image}
                         typeOne={pokemon.type_1}
                         typeTwo={pokemon.type_2}
-                        // pokedexEntry={pokemon.pokedex_entry}
                         shape={pokemon.shape}
                         key={index}
                     />)})
