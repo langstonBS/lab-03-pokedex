@@ -25,21 +25,19 @@ export default class Main extends Component {
     });
   }
 
-  handleSearch = (e) => {
+  handleSearch = async (e) => {
     this.setState({
       inputVal: e.target.value,
-      pokemonName: e.target.value
+      // pokemonName: e.target.value
     });
-    console.log("pokemonName: ", this.state.pokemonName);
-    console.log("pokedex: ", this.state.pokedex);
+    await this.fetchPokemonAPI();
+    console.log('this.state.pokedex: ', this.state.pokedex);
+        
   }
 
   handleFormSubmit = async (e) => {
     e.preventDefault();
-    // this.setState({      
-    //   pokemonName: e.target.value    
-    // });
-    // add searchparams
+    
     await this.fetchPokemonAPI();
   }
 
@@ -48,11 +46,11 @@ export default class Main extends Component {
   }
   
   fetchPokemonAPI = async () => {
-    if (!this.state.pokemonName === '') {
-      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.pokemonName}`);      
+    if (this.state.inputVal.length > 0) {
+      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.inputVal}`);      
       return this.setState({ pokedex: res.body.results });
     } else {
-      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex/`);
+      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?perPage="801"`);
       return this.setState({ pokedex: res.body.results });
     }
   }
