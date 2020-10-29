@@ -5,6 +5,11 @@ export default class Searchbar extends Component {
     render() {
         return (
             <section className="searchbar">
+                <div>search: {this.props.inputVal}</div>
+                <input 
+                    className="searchbar-input"
+                    onChange={this.props.handleSearch}
+                />
                 <Sort 
                     data={this.props.data}
                     handleCategorySelect={this.props.handleCategorySelect}

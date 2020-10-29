@@ -9,7 +9,8 @@ import { pokemon } from './data/data.js';
 export default class App extends Component {
   state = {
     searchBy: '',
-    selectedCategory: ''
+    selectedCategory: '',
+    inputVal: ''
   }
 
   handleCategorySelect = (e) => {
@@ -24,6 +25,12 @@ export default class App extends Component {
     });
   }
 
+  handleSearch = (e) => {
+    this.setState({
+      inputVal: e.target.value
+    })
+  }
+
   render() {
     return (
       <>
@@ -36,11 +43,14 @@ export default class App extends Component {
           data={pokemon}
           handleCategorySelect={this.handleCategorySelect}
           handleSort={this.handleSort}
+          handleSearch={this.handleSearch}
+          inputVal={this.state.inputVal}
         />
         <PokeList 
           data={pokemon}
           selectedCategory={this.state.selectedCategory}
           selectedSort={this.state.selectedSort}
+          inputVal={this.state.inputVal}
         />
       </main>
       </>

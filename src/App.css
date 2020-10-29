@@ -21,8 +21,8 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  height: 100%;
+  grid-template-rows: 200px 1fr;
+  height: 1000px;
 }
 
 .poke-list, .searchbar {
@@ -37,6 +37,27 @@ main {
 }
 
 .searchbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar-input {
+  width: 250px;
+}
+
+.sort-dropdown {
+
+}
+
+.updown-dropdown, .category-dropdown {
+  margin: 5px;
+}
+
+.updown-dropdown {
+
+}
+
+.category-dropdown {
 
 }
 
@@ -47,6 +68,7 @@ main {
 
 .poke-item {
   width: 200px;
+  height: 200px;
   position: relative;
   background-color: black;
   color: white;
