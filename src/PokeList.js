@@ -8,6 +8,7 @@ export default class PokeList extends Component {
         const sorted = sortData(filtered, this.props.selectedSort);
         console.log("sorted", sorted);
         const validated = searchValidation(sorted, this.props.inputVal);
+        console.log("validated", validated);
 
         return (
             <section className="poke-list">
@@ -35,7 +36,6 @@ const filterData = (data, filterCategory) => {
 }
 
 const sortData = (data, selectedSort) => {
-    console.log("selectedSort", selectedSort)
     if (selectedSort === '') {
         return data;
     }
@@ -49,7 +49,7 @@ const sortData = (data, selectedSort) => {
 
 const searchValidation = (data, input) => {
     if (input) {
-        return data.filter(pokemon => pokemon.pokemon.includes(input));
+        return data.filter(pokemon => pokemon.pokemon.toLowerCase().includes(input));
     } else {
         return data;
     }
