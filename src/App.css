@@ -29,6 +29,8 @@ header {
 
 .header {
   background-position-x: 5%;
+  letter-spacing: 2px;
+  font-size: 1.5em;
 }
 
 .navbar {

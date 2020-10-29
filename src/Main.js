@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import request from 'superagent';
 import PokeList from './PokeList.js';
 import Searchbar from './Searchbar.js';
-import { pokemon } from './data/data.js';
 
 export default class Main extends Component {
   state = {
@@ -31,11 +30,16 @@ export default class Main extends Component {
       inputVal: e.target.value,
       pokemonName: e.target.value
     });
+    console.log("pokemonName: ", this.state.pokemonName);
+    console.log("pokedex: ", this.state.pokedex);
   }
 
   handleFormSubmit = async (e) => {
     e.preventDefault();
-
+    // this.setState({      
+    //   pokemonName: e.target.value    
+    // });
+    // add searchparams
     await this.fetchPokemonAPI();
   }
 
@@ -44,8 +48,8 @@ export default class Main extends Component {
   }
   
   fetchPokemonAPI = async () => {
-    if (this.state.pokemonName > 0) {
-      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.pokemonName}`);
+    if (!this.state.pokemonName === '') {
+      const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?pokemon=${this.state.pokemonName}`);      
       return this.setState({ pokedex: res.body.results });
     } else {
       const res = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex/`);
@@ -58,7 +62,7 @@ export default class Main extends Component {
       <>
       <main>
         <Searchbar 
-          data={pokemon}
+          data={this.state.pokedex}
           handleFormSubmit={this.handleFormSubmit}
           handleCategorySelect={this.handleCategorySelect}
           handleSort={this.handleSort}
@@ -67,8 +71,7 @@ export default class Main extends Component {
           pokemonName={this.state.pokemonName}
         />
         <PokeList 
-          data={pokemon}
-          pokedex={this.state.pokedex}
+          data={this.state.pokedex}
           selectedCategory={this.state.selectedCategory}
           selectedSort={this.state.selectedSort}
           inputVal={this.state.inputVal}
