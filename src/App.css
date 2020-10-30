@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,900;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
 html, body {
   background-color: lightcoral;
 }
@@ -12,6 +16,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  font-family: 'Vampiro One', cursive;
 }
 
 .header, .navbar {
@@ -30,7 +35,7 @@ header {
 .header {
   background-position-x: 5%;
   letter-spacing: 2px;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .navbar {
@@ -78,12 +83,15 @@ main {
   width: 225px;
   height: 30px;
   text-align: center;
+  letter-spacing: 3px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .submit-button {
   height: 30px;
   width: 30px;
   margin: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .updown-dropdown, .category-dropdown {
@@ -92,6 +100,7 @@ main {
   width: 225px;
   color:  rgba(28, 22, 22, .9);
   display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .content:nth-child(even) {
@@ -117,9 +126,10 @@ main {
   margin: 10px;
   border-radius: 20px;
   box-shadow: 1px 1px 2px 2px rgba(28, 22, 22, 0.67);
+  font-family: 'Bitter', serif;
 }
 
-.poke-name, .poke-typeone, .poke-typetwo, .pokedex-entry, .pokemon-shape, .typeone-label, .typetwo-label {
+.poke-name, .poke-typeone, .poke-typetwo, .pokedex-entry, .pokemon-shape, .typeone-label, .typetwo-label, .abilityone, .abilitytwo, .ability-label {
   position: absolute;
 }
 
@@ -129,7 +139,7 @@ main {
   z-index: 2;
   letter-spacing: 3px;
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .poke-img {
@@ -137,6 +147,10 @@ main {
   left: 15%;
   top: 5%;
   width: 70%;
+}
+
+.typeone-label, .typetwo-label, .poke-typeone, .poke-typetwo {
+  font-weight: 500;
 }
 
 .typeone-label {
@@ -161,6 +175,25 @@ main {
   right: 11%;
   font-style: italic;
   text-align: right;
+}
+
+.abilityone {
+  bottom: 24%;
+  right: 11%;
+  font-style: italic;
+  text-align: right;
+}
+
+.abilitytwo {
+  bottom: 20%;
+  right: 11%;
+  font-style: italic;
+  text-align: right;
+}
+
+.ability-label {
+  bottom: 24%;
+  left: 11%;
 }
 
 .pokedex-entry {

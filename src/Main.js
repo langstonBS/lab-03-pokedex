@@ -29,9 +29,7 @@ export default class Main extends Component {
     this.setState({
       inputVal: e.target.value,
     });
-    await this.fetchPokemonAPI();
-    console.log('this.state.pokedex: ', this.state.pokedex);
-        
+    await this.fetchPokemonAPI();        
   }
 
   handleFormSubmit = async (e) => {
