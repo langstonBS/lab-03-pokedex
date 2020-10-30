@@ -13,13 +13,14 @@ export default class Main extends Component {
     pokedex: [],
     loading: true,
     activePage: 1,
+    perPage: 50,
   };
 
-  handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
-    this.setState({
+  async handlePageChange(pageNumber) {
+    await this.setState({
       activePage: pageNumber,
     });
+    this.fetchPokemonAPI();
   }
 
   handleCategorySelect = (e) => {
@@ -62,7 +63,7 @@ export default class Main extends Component {
       });
     } else {
       const res = await request.get(
-        `https://alchemy-pokedex.herokuapp.com/api/pokedex?perPage="801"`
+        `https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.activePage}&perPage=${this.state.perPage}`
       );
       return this.setState({
         pokedex: res.body.results,
@@ -86,7 +87,7 @@ export default class Main extends Component {
           />
           <Pagination
             activePage={this.state.activePage}
-            itemsCountPerPage={20}
+            itemsCountPerPage={50}
             totalItemsCount={801}
             pageRangeDisplayed={5}
             onChange={this.handlePageChange.bind(this)}
