@@ -18,9 +18,7 @@ export default class PokeItem extends Component {
         {validateType(this.props.typeTwo)}
         <div className="ability-label">Abilities: </div>
         <div className="abilityone">{this.props.abilityOne}</div>
-        <div className="abilitytwo">
-          {validateAbility(this.props.abilityTwo)}
-        </div>
+        {validateAbility(this.props.abilityTwo)}
         <div className="pokemon-shape">shape: {this.props.shape}</div>
       </div>
     );
