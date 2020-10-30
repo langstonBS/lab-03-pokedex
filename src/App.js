@@ -94,11 +94,11 @@ export default class App extends Component {
                 />
               )}
             />
-            <Route
-              path="/"
+            {/* <Route
+              path="/details:pokemon"
               exact
               render={(routerProps) => <List {...routerProps} />}
-            />
+            /> */}
           </Switch>
         </Router>
       </div>
