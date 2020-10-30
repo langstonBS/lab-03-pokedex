@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import request from "superagent";
 import Main from "./Main.js";
-import List from "./List.js";
+// import List from "./List.js";
 import Header from "./Header.js";
 import Navbar from "./Navbar.js";
 

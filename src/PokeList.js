@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Link from "react-router-dom";
+// import Link from "react-router-dom";
 import PokeItem from "./PokeItem.js";
 
 export default class PokeList extends Component {
