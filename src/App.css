@@ -211,21 +211,11 @@ main {
   font-size: 0.8em;
 }
 
-
-/* 
-
-
-*/
-
 .pagination {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 ul.pagination li {

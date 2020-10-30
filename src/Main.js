@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-=======
 import Pagination from "react-js-pagination";
 import request from "superagent";
->>>>>>> 8864ac76a22d7928d2a8305cfda0d74da21c7dd7
 import PokeList from "./PokeList.js";
 import Searchbar from "./Searchbar.js";
 
