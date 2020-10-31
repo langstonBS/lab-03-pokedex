@@ -124,7 +124,6 @@ main {
   border-radius: 20px;
   box-shadow: 1px 1px 2px 2px rgba(28, 22, 22, 0.67);
   font-family: 'Bitter', serif;
-  cursor: pointer;
 }
 
 .poke-name, .poke-typeone, .poke-typetwo, .pokedex-entry, .pokemon-shape, .typeone-label, .typetwo-label, .abilityone, .abilitytwo, .ability-label {
@@ -253,4 +252,14 @@ ul.pagination li a.active {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+}
+
+.details-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-details {
+  /* details card container */
 }

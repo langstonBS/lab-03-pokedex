@@ -16,15 +16,12 @@ export default class Details extends Component {
       pokemon: res.body.results[0],
       loading: false,
     });
-    console.log("this.state.pokemon: ", this.state.pokemon);
   };
 
   render() {
-    console.log("this.state: ", this.state);
-
     return (
-      <>
-        <div>{this.props.match.params.pokename} page </div>
+      <div className="details-page">
+        {/* <div>{this.props.match.params.pokename} page </div> */}
         {this.state.loading ? (
           <div className="loading">
             <img
@@ -44,7 +41,7 @@ export default class Details extends Component {
             shape={this.state.pokemon.shape}
           />
         )}
-      </>
+      </div>
     );
   }
 }

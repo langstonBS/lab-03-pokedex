@@ -5,8 +5,10 @@ export default class PokeItem extends Component {
     const titleCase = this.props.name.replace(/(^|-)(\w)/g, (input) => {
       return input.toUpperCase();
     });
+    const cursor = { cursor: "pointer" };
+
     return (
-      <div className="poke-item">
+      <div className="poke-item" style={cursor}>
         <div className="poke-name">{titleCase}</div>
         <img
           className="poke-img"

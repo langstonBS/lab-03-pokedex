@@ -30,7 +30,7 @@ export default class PokeList extends Component {
                   abilityOne={pokemon.ability_1}
                   abilityTwo={pokemon.ability_2}
                   shape={pokemon.shape}
-                  key={index}
+                  key={pokemon.id}
                   onClick={(e) => this.props.handlePokemonClick(pokemon)}
                 />
               </Link>

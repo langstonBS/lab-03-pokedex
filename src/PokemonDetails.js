@@ -7,7 +7,7 @@ export default class PokemonDetails extends Component {
     });
 
     return (
-      <div className="poke-item">
+      <div className="poke-item poke-details">
         <div className="poke-name">{titleCase}</div>
         <img
           className="poke-img"
@@ -16,12 +16,46 @@ export default class PokemonDetails extends Component {
         />
         <div className="typeone-label">Primary Type: </div>
         <div className="poke-typeone">{this.props.typeOne}</div>
-        {this.props.typeTwo}
+        {validateType(this.props.typeTwo)}
         <div className="ability-label">Abilities: </div>
         <div className="abilityone">{this.props.abilityOne}</div>
-        {this.props.abilityTwo}
+        {validateAbility(this.props.abilityTwo)}
         <div className="pokemon-shape">shape: {this.props.shape}</div>
       </div>
     );
   }
 }
+
+const validateType = (props) => {
+  if (props === "NA") {
+    return (
+      <>
+        <div className="typetwo-label"></div>
+        <div className="poke-typetwo"></div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="typetwo-label">Secondary Type: </div>
+        <div className="poke-typetwo">{props}</div>
+      </>
+    );
+  }
+};
+
+const validateAbility = (props) => {
+  if (props === "NA") {
+    return (
+      <>
+        <div className="abilitytwo"></div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="abilitytwo">{props}</div>
+      </>
+    );
+  }
+};
