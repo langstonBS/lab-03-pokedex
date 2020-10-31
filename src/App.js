@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import request from "superagent";
 import Main from "./Main.js";
-// import List from "./List.js";
+import Details from "./Details.js";
 import Header from "./Header.js";
 import Navbar from "./Navbar.js";
 
@@ -15,6 +15,20 @@ export default class App extends Component {
     inputVal: "",
     pokedex: [],
     loading: true,
+    activePage: 1,
+    perPage: 50,
+    pokemon: [],
+  };
+
+  async handlePageChange(pageNumber) {
+    await this.setState({
+      activePage: pageNumber,
+    });
+    this.fetchPokemonAPI();
+  }
+
+  handlePokemonClick = async (pokemon) => {
+    this.props.history.push(`/pokemon/${pokemon.pokemon}`);
   };
 
   handleCategorySelect = (e) => {
@@ -30,10 +44,10 @@ export default class App extends Component {
   };
 
   handleSearch = async (e) => {
-    await (this.setState({
+    this.setState({
       inputVal: e.target.value,
-    }),
-    this.fetchPokemonAPI());
+    });
+    await this.fetchPokemonAPI();
   };
 
   handleFormSubmit = async (e) => {
@@ -57,7 +71,7 @@ export default class App extends Component {
       });
     } else {
       const res = await request.get(
-        `https://alchemy-pokedex.herokuapp.com/api/pokedex?perPage="801"`
+        `https://alchemy-pokedex.herokuapp.com/api/pokedex?page=${this.state.activePage}&perPage=${this.state.perPage}`
       );
       return this.setState({
         pokedex: res.body.results,
@@ -88,17 +102,28 @@ export default class App extends Component {
                   handleSort={this.handleSort}
                   handleSearch={this.handleSearch}
                   inputVal={this.state.inputVal}
-                  pokemonName={this.state.pokemonName}
                   selectedCategory={this.state.selectedCategory}
                   selectedSort={this.state.selectedSort}
+                  fetchPokemonAPI={this.fetchPokemonAPI}
+                  activePage={this.state.activePage}
+                  perPage={this.state.perPage}
+                  handlePokemonClick={this.handlePokemonClick}
+                  handlePageChange={this.handlePageChange.bind(this)}
                 />
               )}
             />
-            {/* <Route
-              path="/details:pokemon"
+            <Route
+              path="/details/:pokename"
               exact
-              render={(routerProps) => <List {...routerProps} />}
-            /> */}
+              render={(routerProps) => (
+                <Details
+                  {...routerProps}
+                  data={this.state.pokedex}
+                  fetchPokemonAPI={this.fetchPokemonAPI}
+                  pokemon={this.state.pokemon}
+                />
+              )}
+            />
           </Switch>
         </Router>
       </div>
