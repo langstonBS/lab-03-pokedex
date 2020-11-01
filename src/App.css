@@ -406,6 +406,13 @@ ul.pagination li a.active {
   color: white;
 }
 
+.det-genlabel {
+  position: absolute;
+  font-size: 0.6em;
+  right: 44%;
+  bottom: 56%;
+}
+
 .det-generation {
   position: absolute;
   right: 48.7%;
@@ -426,18 +433,18 @@ ul.pagination li a.active {
 
 .det-egggroups {
   position: absolute;
-  right: 40%;
+  right: 38%;
   bottom: 20%;
 }
 
 .det-eggone {
   position: absolute;
-  right: 40%;
+  right: 38%;
   bottom: 15%;
 }
 
 .det-eggtwo {
   position: absolute;
-  right: 40%;
+  right: 38%;
   bottom: 10%;
 }

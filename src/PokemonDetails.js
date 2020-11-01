@@ -41,6 +41,7 @@ export default class PokemonDetails extends Component {
           <div className="det-speed">SPD {this.props.speed}</div>
           <div className="det-height">{this.props.height} ft</div>
           <div className="det-weight">{this.props.weight} lbs</div>
+          <div className="det-genlabel">Generation</div>
           <div className="det-generation">{this.props.generation_id}</div>
           <div className="det-baseexp">
             BASE EXP {this.props.base_experience}
