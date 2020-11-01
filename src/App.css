@@ -40,6 +40,7 @@ header {
 
 .navbar {
   background-position-x: 95%;
+  font-size: 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -118,11 +119,11 @@ main {
   background-image: url('./blank-card.png');
   width: 360px;
   height: 500px;
-  background-color: rgba(38, 119, 201, 0.6);
+  background-color: rgba(38, 119, 201, 0.75);
   color: black;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 1px 1px 2px 2px rgba(28, 22, 22, 0.67);
+  box-shadow: 1px 1px 2px 2px rgba(28, 22, 22, 0.757);
   font-family: 'Bitter', serif;
 }
 
@@ -261,5 +262,182 @@ ul.pagination li a.active {
 }
 
 .poke-details {
-  /* details card container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-family: 'Bitter', serif;
+}
+
+.pokedex-img {
+  position: relative;
+  background-image: url("https://i.pinimg.com/originals/4e/e5/07/4ee507952983bcc4e807feed82fbcdd2.jpg");
+  border: 10px solid #d02013;
+  border-radius: 10px;
+  margin: 40px;
+  min-height: 650px;
+  min-width: 910px;
+  font-size: 2em;
+  color: rgba(143, 142, 142, 0.75);
+}
+
+.det-img {
+  position: absolute;
+  top: 10%;
+  left: -10px;
+  width: 45%;
+}
+
+.det-name {
+  position: absolute;
+  top: 13%;
+  left: 52%;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.det-typeone {
+  position: absolute;
+  text-align: center;
+  right: 23.7%;
+  top: 35.6%;
+  height: 46.2px;
+  width: 147px;
+  border: 2px solid #676767;
+  background-color: #f08080;
+  color: white;
+}
+
+.det-typetwo {
+  position: absolute;
+  text-align: center;
+  right: 2.1%;
+  top: 35.6%;
+  height: 46.2px;
+  width: 171px;
+  border: 2px solid #676767;
+  background-color: #f08080;
+  color: white;
+
+}
+
+.det-abilities {
+  position: absolute;
+  left: 11%;
+  bottom: 20%;
+}
+
+.det-abilityone {
+  position: absolute;
+  left: 11%;
+  bottom: 15%;
+}
+
+.det-abilitytwo {
+  position: absolute;
+  left: 11%;
+  bottom: 10%;
+}
+
+.det-abilityhidden {
+  position: absolute;
+  left: 11%;
+  bottom: 5%;
+}
+
+.det-height {
+  position: absolute;
+  bottom: 41.6%;
+  right: 5%;
+}
+
+.det-weight {
+  position: absolute;
+  bottom: 33%;
+  right: 5%;
+  background-color: white;
+
+}
+
+.det-hp {
+  position: absolute;
+  right: 42%;
+  top: 21%;
+}
+
+.det-attack {
+  position: absolute;
+  top: 21%;
+  right: 22%;
+}
+
+.det-defense {
+  position: absolute;
+  top: 21%;
+  right: 3%;
+}
+
+.det-specattack {
+  position: absolute;
+  top: 25.5%;
+  right: 22%;
+}
+
+.det-specdefense {
+  position: absolute;
+  top: 25.5%;
+  right: 3%;
+}
+
+.det-speed {
+  position: absolute;
+  top: 25.5%;
+  right: 42%;
+
+
+}
+
+.det-baseexp {
+  position: absolute;
+  text-align: center;
+  font-size: .8em;
+  right: 3%;
+  top: 14%;
+  color: white;
+}
+
+.det-generation {
+  position: absolute;
+  right: 48.7%;
+  bottom: 50.5%;
+}
+
+.det-pokebasetxt {
+  position: absolute;
+  right: 11%;
+  bottom: 20%;
+}
+
+.det-pokebase {
+  position: absolute;
+  right: 11%;
+  bottom: 15%;
+}
+
+.det-egggroups {
+  position: absolute;
+  right: 40%;
+  bottom: 20%;
+}
+
+.det-eggone {
+  position: absolute;
+  right: 40%;
+  bottom: 15%;
+}
+
+.det-eggtwo {
+  position: absolute;
+  right: 40%;
+  bottom: 10%;
 }

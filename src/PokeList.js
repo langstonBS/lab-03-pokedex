@@ -19,7 +19,7 @@ export default class PokeList extends Component {
             />
           </div>
         ) : (
-          validated.map((pokemon, index) => {
+          validated.map((pokemon) => {
             return (
               <Link to={`/details/${pokemon.pokemon}`}>
                 <PokeItem
@@ -30,7 +30,7 @@ export default class PokeList extends Component {
                   abilityOne={pokemon.ability_1}
                   abilityTwo={pokemon.ability_2}
                   shape={pokemon.shape}
-                  key={pokemon.id}
+                  key={pokemon._id}
                   onClick={(e) => this.props.handlePokemonClick(pokemon)}
                 />
               </Link>

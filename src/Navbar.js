@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     return (
       <div className="navbar">
         <Link to="/">Home </Link>
-        <Link to="/details">Details </Link>
+        {/* <Link to="/details">Details </Link> */}
       </div>
     );
   }

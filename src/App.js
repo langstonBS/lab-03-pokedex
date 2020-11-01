@@ -9,7 +9,6 @@ import Navbar from "./Navbar.js";
 
 export default class App extends Component {
   state = {
-    searchBy: "",
     selectedCategory: "",
     selectedSort: "",
     inputVal: "",
