@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,900;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 html, body {
   background-color: lightcoral;
@@ -266,7 +267,7 @@ ul.pagination li a.active {
   justify-content: center;
   align-items: center;
   width: 50%;
-  font-family: 'Bitter', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .pokedex-img {
@@ -294,6 +295,7 @@ ul.pagination li a.active {
   left: 52%;
   color: white;
   text-shadow: 1px 1px 1px grey;
+  font-family: 'Bitter', serif;
 }
 
 .det-typeone {
@@ -325,6 +327,7 @@ ul.pagination li a.active {
   position: absolute;
   left: 11%;
   bottom: 20%;
+  font-style: italic;
 }
 
 .det-abilityone {
@@ -399,12 +402,18 @@ ul.pagination li a.active {
   position: absolute;
   right: 48.8%;
   bottom: 50.5%;
+  font-style: italic;
+}
+
+.genopacity {
+  opacity: 0.3;
 }
 
 .det-pokebasetxt {
   position: absolute;
   right: 11%;
   bottom: 20%;
+  font-style: italic;
 }
 
 .det-pokebase {
@@ -417,6 +426,7 @@ ul.pagination li a.active {
   position: absolute;
   right: 38%;
   bottom: 20%;
+  font-style: italic;
 }
 
 .det-eggone {

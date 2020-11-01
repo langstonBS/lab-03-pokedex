@@ -36,7 +36,7 @@ export default class PokemonDetails extends Component {
           <div className="det-speed">SPD {this.props.speed}</div>
           <div className="det-height">{this.props.height} ft</div>
           <div className="det-weight">{this.props.weight} lbs</div>
-          <div className="det-generation">{this.props.generation_id}</div>
+          {validateGeneration(this.props.generation_id)}
           <div className="det-pokebasetxt">Pokebase: </div>
           <div className="det-pokebase">{titleCase(this.props.pokebase)}</div>
           <div>
@@ -102,6 +102,22 @@ const validateAbilities = (typetwo, typehidden) => {
       <>
         <div className="det-abilitytwo">{typetwo}</div>
         <div className="det-abilityhidden">{typehidden}</div>
+      </>
+    );
+  }
+};
+
+const validateGeneration = (props) => {
+  if (props === "NA") {
+    return (
+      <>
+        <div className="det-generation genopacity">X</div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="det-generation">{props}</div>
       </>
     );
   }
