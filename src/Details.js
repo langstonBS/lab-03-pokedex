@@ -24,7 +24,7 @@ export default class Details extends Component {
         {this.state.loading ? (
           <div className="loading">
             <img
-              className="loading-gif"
+              className="loading-gif det-loading"
               src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg"
               alt="loading"
             />

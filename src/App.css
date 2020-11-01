@@ -60,6 +60,10 @@ main {
   align-items: center;
 }
 
+.det-loading {
+  margin-top: 300px;
+}
+
 .loading-gif {
   max-width: 10%;
 }
