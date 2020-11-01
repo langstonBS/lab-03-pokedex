@@ -5,6 +5,28 @@ import Searchbar from "./Searchbar.js";
 
 export default class Main extends Component {
   render() {
+    const validatePagination = (props) => {
+      // pagination isn't currently set up to work correctly when the user makes a search
+      if (props.length > 0) {
+        return <div></div>;
+      } else if (props === "") {
+        return (
+          <div>
+            <Pagination
+              activePage={this.props.activePage}
+              itemsCountPerPage={50}
+              totalItemsCount={801}
+              pageRangeDisplayed={5}
+              onChange={this.props.handlePageChange}
+              firstPageText="first"
+              lastPageText="last"
+              prevPageText="prev"
+              nextPageText="next"
+            />
+          </div>
+        );
+      }
+    };
     return (
       <>
         <main>
@@ -17,17 +39,7 @@ export default class Main extends Component {
             inputVal={this.props.inputVal}
             pokemonName={this.props.pokemonName}
           />
-          <Pagination
-            activePage={this.props.activePage}
-            itemsCountPerPage={50}
-            totalItemsCount={801}
-            pageRangeDisplayed={5}
-            onChange={this.props.handlePageChange}
-            firstPageText="first"
-            lastPageText="last"
-            prevPageText="prev"
-            nextPageText="next"
-          />
+          <div>{validatePagination(this.props.inputVal)}</div>
           <PokeList
             data={this.props.data}
             loading={this.props.loading}

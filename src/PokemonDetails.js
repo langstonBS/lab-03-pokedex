@@ -18,17 +18,12 @@ export default class PokemonDetails extends Component {
           />
           <div className="det-egggroups">Egg Groups:</div>
           <div className="det-eggone">{this.props.eggGroupOne}</div>
-          <div className="det-eggtwo">{this.props.eggGroupTwo}</div>
-          {/* egg group two can be NA */}
+          {validateEgg(this.props.eggGroupTwo)}
           <div className="det-typeone">{this.props.typeOne}</div>
-          <div className="det-typetwo">{this.props.typeTwo}</div>
-          {/* type two can be NA */}
+          {validateType(this.props.typeTwo)}
           <div className="det-abilities">Abilities:</div>
           <div className="det-abilityone">{this.props.abilityOne}</div>
-          <div className="det-abilitytwo">{this.props.abilityTwo}</div>
-          {/* ability two can be NA */}
-          <div className="det-abilityhidden">{this.props.abilityHidden}</div>
-          {/* ability hidden can be NA */}
+          {validateAbilities(this.props.abilityTwo, this.props.abilityHidden)}
           <div className="det-attack">ATK {this.props.attack}</div>
           <div className="det-defense">DEF {this.props.defense}</div>
           <div className="det-specattack">
@@ -41,50 +36,73 @@ export default class PokemonDetails extends Component {
           <div className="det-speed">SPD {this.props.speed}</div>
           <div className="det-height">{this.props.height} ft</div>
           <div className="det-weight">{this.props.weight} lbs</div>
-          <div className="det-genlabel">Generation</div>
           <div className="det-generation">{this.props.generation_id}</div>
-          <div className="det-baseexp">
-            BASE EXP {this.props.base_experience}
-          </div>
           <div className="det-pokebasetxt">Pokebase: </div>
           <div className="det-pokebase">{titleCase(this.props.pokebase)}</div>
-          {/* <div className="det-pokedex">{this.props.pokedex}</div> */}
+          <div>
+            <a target="_blank" href={this.props.pokedex}>
+              <img
+                className="det-pokedexlogo"
+                src="https://lh3.googleusercontent.com/proxy/yq7jjuG955Q3WiSAnbtBnBl7D7HQ4TOwm4lNt3-gx0DxdClockEA9XtxDyWrJk03rpjhV0iXOv6xcjSRTLpUmvHWrCxfapzN1ZLaP5S1uQcSxcGZ7H6EGv2DndSFRAdBcJetYw"
+                alt="pokeball"
+              ></img>
+            </a>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-// const validateType = (props) => {
-//   if (props === "NA") {
-//     return (
-//       <>
-//         <div className="typetwo-label"></div>
-//         <div className="poke-typetwo"></div>
-//       </>
-//     );
-//   } else {
-//     return (
-//       <>
-//         <div className="typetwo-label">Secondary Type: </div>
-//         <div className="poke-typetwo">{props}</div>
-//       </>
-//     );
-//   }
-// };
+const validateEgg = (props) => {
+  if (props === "NA") {
+    return (
+      <>
+        <div className="det-eggtwo"></div>
+      </>
+    );
+  } else {
+    return <div className="det-eggtwo">{props}</div>;
+  }
+};
 
-// const validateAbility = (props) => {
-//   if (props === "NA") {
-//     return (
-//       <>
-//         <div className="abilitytwo"></div>
-//       </>
-//     );
-//   } else {
-//     return (
-//       <>
-//         <div className="abilitytwo">{props}</div>
-//       </>
-//     );
-//   }
-// };
+const validateType = (props) => {
+  if (props === "NA") {
+    return (
+      <>
+        <div className="det-typetwo">---</div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div className="det-typetwo">{props}</div>
+      </>
+    );
+  }
+};
+
+const validateAbilities = (typetwo, typehidden) => {
+  if (typetwo === "NA" && typehidden !== "NA") {
+    return (
+      <>
+        <div className="det-abilitytwo">{typehidden}</div>
+      </>
+    );
+  }
+  if (typetwo === "NA" && typehidden === "NA") {
+    return (
+      <>
+        <div></div>
+      </>
+    );
+  }
+  if (typetwo !== "NA" && typehidden !== "NA") {
+    return (
+      <>
+        <div className="det-abilitytwo">{typetwo}</div>
+        <div className="det-abilityhidden">{typehidden}</div>
+      </>
+    );
+  }
+};

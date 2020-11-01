@@ -393,29 +393,11 @@ ul.pagination li a.active {
   position: absolute;
   top: 25.5%;
   right: 42%;
-
-
-}
-
-.det-baseexp {
-  position: absolute;
-  text-align: center;
-  font-size: .8em;
-  right: 3%;
-  top: 14%;
-  color: white;
-}
-
-.det-genlabel {
-  position: absolute;
-  font-size: 0.6em;
-  right: 44%;
-  bottom: 56%;
 }
 
 .det-generation {
   position: absolute;
-  right: 48.7%;
+  right: 48.8%;
   bottom: 50.5%;
 }
 
@@ -447,4 +429,11 @@ ul.pagination li a.active {
   position: absolute;
   right: 38%;
   bottom: 10%;
+}
+
+.det-pokedexlogo {
+  position: absolute;
+  width: 9.2%;
+  top: 9.5%;
+  right: 48.2%;
 }

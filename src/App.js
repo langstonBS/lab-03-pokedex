@@ -43,7 +43,7 @@ export default class App extends Component {
   };
 
   handleSearch = async (e) => {
-    this.setState({
+    await this.setState({
       inputVal: e.target.value,
     });
     await this.fetchPokemonAPI();
