@@ -43,7 +43,7 @@ export default class PokemonDetails extends Component {
             <a target="_blank" rel="noreferrer" href={this.props.pokedex}>
               <img
                 className="det-pokedexlogo"
-                src="https://lh3.googleusercontent.com/proxy/yq7jjuG955Q3WiSAnbtBnBl7D7HQ4TOwm4lNt3-gx0DxdClockEA9XtxDyWrJk03rpjhV0iXOv6xcjSRTLpUmvHWrCxfapzN1ZLaP5S1uQcSxcGZ7H6EGv2DndSFRAdBcJetYw"
+                src="https://webstockreview.net/images/pokeball-clipart-ball-pokemon-9.png"
                 alt="pokeball"
               ></img>
             </a>
